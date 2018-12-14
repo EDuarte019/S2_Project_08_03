@@ -6,20 +6,38 @@
    Case Problem 3
 
    Calendar Style Sheet
-   Author: 
-   Date:   
+  Author: Evelyn Duarte
+      Date: 12/12/18  
 
    Filename:   lht_tables.css
 
+   
 */
 
 /* ===============================
    Mobile Styles: 0px to 640px 
    ===============================
 */
+@media only screen and (max-width:640px) {
 
+    table,
+    tbody,
+    tr,
+    td,
+    th,
+    caption {
+        display: block;
+    }
 
+    thead h1 {
+        display: none;
+    }
 
+    table caption {
+        color: white;
+        background-color: rgb(#797F7F, FS 26270);
+    }
+}
 
 /* =============================================
    Tablet and Desktop Styles: greater than 640px
