@@ -18,8 +18,10 @@
    Mobile Styles: 0px to 640px 
    ===============================
 */
-@media only screen and (max-width:640px) {
+/* Every screen that has a width smaller than 640 pixels. */
+@media only screen and (max-width: 640px) {
 
+    /* Every table, table body, table row, table data, table header and captions are displayed as block; */
     table,
     tbody,
     tr,
@@ -29,13 +31,43 @@
         display: block;
     }
 
-    thead h1 {
+    /* the table head and h1 elements are not displayed. */
+    thead,
+    h1 {
         display: none;
     }
 
-    table caption {
+    /* Every caption has a certain color, the size of the font is 1.5 em and the height of the lines are 2em. */
+    caption {
         color: white;
-        background-color: rgb(#797F7F, FS 26270);
+        background-color: gray;
+        font-size: 1.5em;
+        line-height: 2em;
+    }
+
+    /* Every table data had a border thats 1 px thats gray and dotted, the table has a relative postion and the padding on the left is 40% and every height is more than 40px. */
+    td {
+        border: 1px dotted grey;
+        color: rgb(11, 12, 145);
+        position: relative;
+        padding-left: 40%;
+        min-height: 40px;
+    }
+
+    /* The table row pseudo-class to target odd numbers which has a background-color, a 2px border is solid and gray. */
+    tr:nth-of-type(odd) {
+        background-color: rgb(255, 235, 178);
+        border: 2px solid gray;
+    }
+
+    /* the table data cell targetting what is before the data cells, then placing the content attribute data-date, absolute position, Coordinates for (0,0) are top and left with 0px, padding of 5px and width 40%. */
+    td::before {
+        content: attr(data-date);
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        padding: 5px;
+        width: 40%;
     }
 }
 
@@ -43,3 +75,59 @@
    Tablet and Desktop Styles: greater than 640px
    =============================================
 */
+/*Every screen that has a width greater than 641px. */
+@media only screen and (min-width:641px) {
+
+    /* The table element has a background image with no tiling and placed on the bottom right with a width of 40 percent, the table has a 6px double border that collapse. the top/bottom margin are set to 20px while the left/right are set to auto to horizontally center it. the layout is fixed and the table has a width of 85%. */
+    table {
+        background: url(lht_photo1.png) no-repeat bottom right;
+        background-size: 40%;
+        border: 6px double rgb(154, 64, 3);
+        border-collapse: collapse;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        table-layout: fixed;
+        width: 85%;
+    }
+
+    /* The table header and table data has a 1px solid gray border. The size of the font is .85em and the weight is normal. The padding all around is 5px while the text is aligned to the top with a width of 14.28 percent and the there is a break word wrap. */
+    th,
+    td {
+        border: 1px solid gray;
+        font-size: 0.85em;
+        font-weight: normal;
+        padding: 5px;
+        text-align: top;
+        width: 14.28%;
+        word-wrap: break-word;
+    }
+
+    /* The table data has a background-color of rgba and a color of rgb. */
+    td {
+        background-color: rgba(171, 171, 171, 0.6);
+        color: rgb(11, 12, 145);
+    }
+
+    /* The data-date attribute for february has a background color and also a box shadow with 0px vertical and horizontal offset and 20px blue, and a gray inset. */
+    td[data-date*="Feb"] {
+        background-color: rgba(232, 214, 148, 0.6);
+        box-shadow: 0px 0px 20px inset gray;
+    }
+
+    /* The caption is aligned to the top and center, there is padding on the bottom and a font size of 1.2em and the spacing between letters are 3px. */
+    caption {
+        text-align: top;
+        text-align: center;
+        padding-bottom: 10px;
+        font-size: 1.2em;
+        letter-spacing: 3px;
+    }
+
+    /* The table head has a bacground color of rgb and the text is white. */
+    thead th {
+        background-color: rgb(154, 64, 6);
+        color: white;
+    }
+}

@@ -6,8 +6,8 @@
    Case Problem 3
 
    Columns Style Sheet
-   Author: 
-   Date:   
+   Author: Evelyn Duarte
+   Date:12/14/18
 
    Filename:   lht_columns.css
 
@@ -16,4 +16,20 @@
 
 
 /* Column Styles */
+/* The article has a column width of 260px and a column gap of 20px. Also, a dividing line od 1px solid with an rgb. Two orphans and widows. */
+article {
+    -webkit-column-width: 260px;
+    -moz-column-width: 260px;
+    column-width: 260px;
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    column-rule: 1px solid rgb(154, 64, 31);
+    widows: 2;
+    orphans: 2;
+}
 
+/* the h1 nested within the article spans all columns. */
+article h1 {
+    column-span: all;
+}

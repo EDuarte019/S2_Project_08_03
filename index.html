@@ -20,8 +20,8 @@
     <title>Lyman Hall Theater in February</title>
     <link href="lht_reset.css" rel="stylesheet" />
     <link href="lht_styles.css" rel="stylesheet" />
-    <link rel="stylesheet" href="lht_tables.css">
-    <link rel="stylesheet" href="lht_columns.css">
+    <link href="lht_tables.css" rel="stylesheet">
+    <link href="lht_columns.css" rel="stylesheet">
 </head>
 
 <body>
@@ -72,12 +72,15 @@
             your table in advance.
         </p>
     </article>
+    <!-- The table has an id of calendar  -->
     <table id="calendar">
+        <!-- The caption of the entire thing and within is a column ground with two different cols that have different classes and spans. -->
         <caption>February 2018 Calendar</caption>
         <colgroup>
             <col class="weekdays" span="5">
             <col class="weekends" span="2">
         </colgroup>
+        <!-- The table head has the days of the week. -->
         <thead>
             <tr>
                 <th>Sun</th>
@@ -90,6 +93,7 @@
             </tr>
         </thead>
         <tbody>
+            <!-- there are 5 table rows and 7 columns in each and each one has a data-date attribute with the dates numbered off along with the information. -->
             <tr>
                 <td data-date="Sun, Jan 28, 2018">
                     <h1>28</h1>
